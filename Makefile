@@ -13,3 +13,7 @@ linux:
 darwin:
 	@GOOS=darwin GOARCH=amd64 go build -ldflags "-w -s -extldflags '-static'" -gcflags '-trimpath -m' -o bin/starter_darwin_amd64 main.go
 	@GOOS=darwin GOARCH=arm64 go build -ldflags "-w -s -extldflags '-static'" -gcflags '-trimpath -m' -o bin/starter_darwin_arm64 main.go
+
+
+clean:
+	@rm -rf bin
