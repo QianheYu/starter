@@ -69,7 +69,7 @@ func main() {
 
 		eg.Go(func() error {
 			commandParam := strings.SplitN(command, " ", -1)
-			if len(commandParam) > 0 {
+			if len(commandParam) > 1 {
 				log.Printf("[main] start %s args %v\n", commandParam[0], commandParam[1:])
 				ps = &Process{
 					c: exec.CommandContext(ctx, commandParam[0], commandParam[1:]...),
