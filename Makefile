@@ -1,3 +1,6 @@
+build:
+	@go build -ldflags "-w -s -extldflags '-static'" -gcflags '-trimpath -m' -o bin/starter main.go
+
 all: windows linux darwin
 
 windows:
